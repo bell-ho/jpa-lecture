@@ -16,3 +16,5 @@ Table 컬럼명이 다르면 @Column(name = "test")으로 명시
 필드와 컬럼 매핑 : @Column<br>
 기본키 매핑 : @Id<br>
 연관관계 매핑 : @ManyToOne, @JoinColumn<br>
+
+@Transient : DB와 상관없는 컬럼
