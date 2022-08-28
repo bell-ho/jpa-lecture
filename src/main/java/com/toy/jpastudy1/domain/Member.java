@@ -20,6 +20,7 @@ public class Member {
 
     @Id
     private Long id;
+    private int age;
 
     @Column(name = "name") // Table 컬럼명이 다르면 name으로 명시해주면 됨
     private String name;
