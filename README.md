@@ -18,3 +18,5 @@ Table 컬럼명이 다르면 @Column(name = "test")으로 명시
 연관관계 매핑 : @ManyToOne, @JoinColumn<br>
 
 @Transient : DB와 상관없는 컬럼
+
+# 0901
