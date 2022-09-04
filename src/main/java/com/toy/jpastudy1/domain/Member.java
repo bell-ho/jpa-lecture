@@ -5,10 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,9 +16,14 @@ import javax.persistence.Table;
 public class Member {
 
     @Id
+    @Column(name="member_id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private int age;
 
     @Column(name = "name") // Table 컬럼명이 다르면 name으로 명시해주면 됨
     private String name;
+
+    private String city;
+    private String street;
+    private String zipcode;
 }
