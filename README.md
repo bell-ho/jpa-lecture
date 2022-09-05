@@ -26,3 +26,6 @@ Table 컬럼명이 다르면 @Column(name = "test")으로 명시
 @GeneratedValue : 자동 생성<br>
 IDENTITY 전략 : 기본키 생성을 DB에 위임<br>
 SEQUENCE 전략 : 주로 오라클에서 사용
+
+# 0905
+연관관계 매핑 기초
