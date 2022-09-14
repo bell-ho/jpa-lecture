@@ -32,6 +32,10 @@ public class Order {
     @Enumerated(EnumType.STRING) // ORDINAL를 쓰게 되면 순서가 꼬일 가능성이 있음
     private OrderStatus status;
 
+    @OneToOne
+    @JoinColumn(name = "delivery_id")
+    private Delivery delivery;
+
     public void addOrderItem(OrderItem orderItem) { // 매핑 편의 메소드
         orderItems.add(orderItem);
         orderItem.setOrder(this);
