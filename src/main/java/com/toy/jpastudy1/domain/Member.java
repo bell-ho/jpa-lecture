@@ -31,4 +31,8 @@ public class Member {
 
     @OneToMany(mappedBy = "member") // 양방향 매핑
     private List<Order> orders = new ArrayList<>();
+
+    @OneToOne
+    @JoinColumn(name = "locker_id")
+    private Locker locker;
 }
