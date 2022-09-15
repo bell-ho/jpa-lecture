@@ -15,7 +15,7 @@ import java.util.List;
 @Getter
 @Setter
 @Table(name = "Member") // DB에 테이블 이름과 domain이 다르면 @Table 어노테이션에 명시 해주면 됨
-public class Member {
+public class Member extends BaseEntity{
 
     @Id
     @Column(name="member_id")
