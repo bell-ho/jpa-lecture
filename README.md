@@ -83,3 +83,6 @@ JPA 매핑이 편리함<br>
 ## 다대다 한계 극복<br>
 연결 테이블용 엔티티 추가(연결 테이블을 Entity로 승격)<br>
 @ManyToMany를 => @OneToMany, @ManyToOne 로 풀어내야함
+
+# 0915
+## 상속관계 매핑
