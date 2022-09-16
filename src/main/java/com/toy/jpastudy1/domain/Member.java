@@ -32,7 +32,7 @@ public class Member extends BaseEntity{
     @OneToMany(mappedBy = "member") // 양방향 매핑
     private List<Order> orders = new ArrayList<>();
 
-    @OneToOne
+    @OneToOne(fetch = LAZY)
     @JoinColumn(name = "locker_id")
     private Locker locker;
 
