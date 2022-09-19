@@ -2,10 +2,7 @@ package com.toy.jpastudy1.domain;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 import static javax.persistence.FetchType.*;
 
@@ -17,10 +14,11 @@ public class Delivery extends BaseEntity {
     @GeneratedValue
     private Long id;
 
-    private String city;
-    private String street;
-    private String zipcode;
     private DeliveryStatus status;
+
+    @Embedded
+    private Address address;
+
 
     @OneToOne(mappedBy = "delivery", fetch = LAZY)
     private Order order;

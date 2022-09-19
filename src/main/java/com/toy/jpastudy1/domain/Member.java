@@ -7,10 +7,12 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static javax.persistence.FetchType.LAZY;
-import static javax.persistence.GenerationType.*;
+import static javax.persistence.GenerationType.AUTO;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,10 +20,10 @@ import static javax.persistence.GenerationType.*;
 @Getter
 @Setter
 @Table(name = "Member") // DB에 테이블 이름과 domain이 다르면 @Table 어노테이션에 명시 해주면 됨
-public class Member extends BaseEntity{
+public class Member extends BaseEntity {
 
     @Id
-    @Column(name="member_id")
+    @Column(name = "member_id")
     @GeneratedValue(strategy = AUTO)
     private Long id;
 
@@ -32,7 +34,7 @@ public class Member extends BaseEntity{
     private Period workPeriod;
 
     @Embedded
-    private Address address;
+    private Address homeAddress;
 
     @OneToMany(mappedBy = "member") // 양방향 매핑
     private List<Order> orders = new ArrayList<>();
