@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static javax.persistence.CascadeType.*;
+import static javax.persistence.EnumType.*;
 import static javax.persistence.FetchType.*;
 
 @Entity
@@ -35,7 +36,7 @@ public class Order extends BaseEntity {
 
     private LocalDateTime orderDate;
 
-    @Enumerated(EnumType.STRING) // ORDINAL를 쓰게 되면 순서가 꼬일 가능성이 있음
+    @Enumerated(STRING) // ORDINAL를 쓰게 되면 순서가 꼬일 가능성이 있음
     private OrderStatus status;
 
     @OneToOne(fetch = LAZY, cascade = ALL)

@@ -9,6 +9,9 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static javax.persistence.FetchType.LAZY;
+import static javax.persistence.GenerationType.*;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -19,15 +22,17 @@ public class Member extends BaseEntity{
 
     @Id
     @Column(name="member_id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = AUTO)
     private Long id;
 
     @Column(name = "name") // Table 컬럼명이 다르면 name으로 명시해주면 됨
     private String name;
 
-    private String city;
-    private String street;
-    private String zipcode;
+    @Embedded
+    private Period workPeriod;
+
+    @Embedded
+    private Address address;
 
     @OneToMany(mappedBy = "member") // 양방향 매핑
     private List<Order> orders = new ArrayList<>();
