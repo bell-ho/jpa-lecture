@@ -1,14 +1,12 @@
-package com.toy.jpastudy1;
+package com.toy.myshop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import javax.persistence.EntityManager;
-
 @SpringBootApplication
-public class JpaStudy1Application {
+public class MyShopApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(JpaStudy1Application.class, args);
+        SpringApplication.run(MyShopApplication.class, args);
     }
 }

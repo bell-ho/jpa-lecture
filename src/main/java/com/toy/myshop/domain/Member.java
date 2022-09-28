@@ -1,4 +1,4 @@
-package com.toy.jpastudy1.domain;
+package com.toy.myshop.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,9 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import static javax.persistence.FetchType.LAZY;
 import static javax.persistence.GenerationType.AUTO;

@@ -1,4 +1,4 @@
-package com.toy.jpastudy1.domain;
+package com.toy.myshop.domain;
 
 import lombok.Data;
 

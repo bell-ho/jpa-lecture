@@ -1,6 +1,6 @@
-package com.toy.jpastudy1.repository;
+package com.toy.myshop.repository;
 
-import com.toy.jpastudy1.domain.Member;
+import com.toy.myshop.domain.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
